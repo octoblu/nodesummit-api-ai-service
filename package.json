@@ -1,0 +1,20 @@
+{
+  "name": "nodesummit-api-ai-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:octoblu/nodesummit-api-ai-service.git",
+  "author": "peterdemartini <thepeterdemartini@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "exit 0",
+    "start": "node command.js"
+  },
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "debug": "^2.6.8",
+    "express-octoblu": "^3.0.1",
+    "lodash": "^4.17.4",
+    "octodash": "^1.3.1",
+    "uuid": "^3.1.0"
+  }
+}
