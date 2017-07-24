@@ -38,6 +38,9 @@ class Command {
   run() {
     const { clientAccessToken, port } = this.octoDash.parseOptions()
     const meshbluConfig = new MeshbluConfig().toJSON()
+    if (!meshbluConfig.uuid) {
+      return this.octoDash.die(new Error("MeshbluConfig must have a uuid"))
+    }
     new Server({ clientAccessToken, port, meshbluConfig }).run(error => {
       if (error) {
         this.octoDash.die(error)
