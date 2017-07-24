@@ -1,5 +1,6 @@
 const bindAll = require("lodash/fp/bindAll")
 const OctoDash = require("octodash")
+const MeshbluConfig = require("meshblu-config")
 const Server = require("./lib/server")
 const packageJSON = require("./package.json")
 
@@ -36,7 +37,8 @@ class Command {
 
   run() {
     const { clientAccessToken, port } = this.octoDash.parseOptions()
-    new Server({ clientAccessToken, port }).run(error => {
+    const meshbluConfig = new MeshbluConfig().toJSON()
+    new Server({ clientAccessToken, port, meshbluConfig }).run(error => {
       if (error) {
         this.octoDash.die(error)
         return
