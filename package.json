@@ -1,6 +1,6 @@
 {
   "name": "nodesummit-api-ai-service",
-  "version": "3.0.5",
+  "version": "3.1.0",
   "main": "index.js",
   "repository": "git@github.com:octoblu/nodesummit-api-ai-service.git",
   "author": "peterdemartini <thepeterdemartini@gmail.com>",
